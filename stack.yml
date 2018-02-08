@@ -1,0 +1,13 @@
+provider:
+  name: faas
+  gateway: http://localhost:8080
+
+functions:
+  duration-test:
+    lang: python
+    handler: ./duration-test
+    image: viveksyngh/duration-test
+    environment:
+      read_timeout: "2s"
+      write_timeout: "2s"
+
